@@ -59,7 +59,7 @@ function doPost(e) {
 
     const actions = {
       login, logout, getAppBootstrap, getDashboard,
-      listProjects, getProject, getProjectDetail, saveProject, deleteProject, copyProject,
+      listProjects, getProject: getProjectDetail, getProjectDetail, saveProject, deleteProject, copyProject,
       listActivities, saveActivity, deleteActivity,
       listExpenses, saveExpense, deleteExpense,
       listProgress, saveProgress, deleteProgress,
@@ -376,6 +376,10 @@ function listProjects(token, filters) {
     rows=rows.sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt)));
     return ok_('ສຳເລັດ', enrichProjectsBulk_(rows));
   }catch(e){return fail_(safeMessage_(e));}
+}
+
+function getProject(token, projectId) {
+  return getProjectDetail(token, projectId);
 }
 
 function getProjectDetail(token, projectId) {
