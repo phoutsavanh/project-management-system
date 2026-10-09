@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="lo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ລະບົບບໍລິຫານຈັດການໂຄງການ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8F8F6;--card:#fff;--text:#262626;--muted:#777;--line:#ECECEC;--o1:#FF8A24;--o2:#FFC653;--p1:#ED438B;--p2:#FF79AD;--b1:#377BEA;--b2:#55B6F5;--g1:#26B96E;--g2:#59DE91;--t1:#20BFC1;--t2:#64E4DE;--v1:#745CE9;--v2:#9C75F6;--y1:#FFB317;--y2:#FFD968;--danger:#e64a6b}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:'Noto Sans Lao',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.hidden{display:none!important}.app{display:flex;min-height:100vh}.sidebar{width:258px;background:#fff;padding:18px 14px;position:fixed;inset:0 auto 0 0;box-shadow:0 10px 40px rgba(0,0,0,.08);z-index:30;overflow:auto;transition:.25s}.brand{display:flex;gap:12px;align-items:center;padding:8px 10px 17px}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--v1),var(--p2));color:white;display:grid;place-items:center;font-size:23px;box-shadow:0 8px 22px rgba(116,92,233,.25)}.brand h1{font:600 16px 'Noto Sans Lao';margin:0;line-height:1.25}.brand small{color:var(--muted)}.nav-title{font-size:12px;color:#aaa;margin:15px 10px 7px}.nav a{display:flex;align-items:center;gap:11px;padding:11px 12px;margin:4px 0;border-radius:14px;color:#555;text-decoration:none;transition:.22s}.nav a:hover{transform:translateX(3px);background:#faf7ff}.nav a.active{background:linear-gradient(135deg,#f2ecff,#fff0f7);color:#6b50d9;font-weight:700}.ico{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:#f4f4f4}.main{margin-left:258px;width:calc(100% - 258px);padding:18px 22px 34px}.topbar{background:#fff;border:1px solid var(--line);border-radius:22px;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 10px 30px rgba(0,0,0,.05);position:sticky;top:10px;z-index:20}.top-left,.profile{display:flex;align-items:center;gap:10px}.hamb{display:none;border:0;background:#f4f4f4;border-radius:12px;padding:10px}.school{font:500 15px 'Noto Sans Lao'}.system{font-size:12px;color:#888}.mode-pill{padding:6px 10px;border-radius:999px;background:#f1ecff;color:#6f56d9;font:500 12px 'Noto Sans Lao'}.mode-pill.real{background:#e9f9ef;color:#21864d}.avatar{width:37px;height:37px;border-radius:12px;background:linear-gradient(135deg,var(--b1),var(--t2));color:#fff;display:grid;place-items:center;font-weight:700}.content{padding-top:18px}.page{animation:fade .24s ease}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:5px 0 16px}.page-head h2{font:600 25px 'Noto Sans Lao';margin:0}.page-head p{margin:2px 0;color:var(--muted)}.btn{border:0;border-radius:13px;padding:10px 14px;font:500 14px 'Noto Sans Lao';display:inline-flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 7px 18px rgba(0,0,0,.08);transition:.2s;position:relative;overflow:hidden}.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}.btn.primary{color:#fff;background:linear-gradient(135deg,var(--b1),var(--b2))}.btn.success{color:#fff;background:linear-gradient(135deg,var(--g1),var(--g2))}.btn.warn{color:#fff;background:linear-gradient(135deg,var(--o1),var(--o2))}.btn.danger{color:#fff;background:linear-gradient(135deg,#df3f68,#ff7888)}.btn.purple{color:#fff;background:linear-gradient(135deg,var(--v1),var(--v2))}.btn.secondary{background:#fff;border:1px solid var(--line);color:#555;box-shadow:none}.btn.sm{padding:7px 10px;font-size:12px;border-radius:10px}.grid{display:grid;gap:14px}.summary{grid-template-columns:repeat(4,minmax(0,1fr))}.two{grid-template-columns:1.35fr .9fr}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.05)}.click-card{transition:.22s}.click-card:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(0,0,0,.09)}.metric{color:#fff;position:relative;overflow:hidden}.metric .num{font:600 28px 'Noto Sans Lao';margin-top:7px}.metric small{opacity:.9}.metric .bigico{position:absolute;right:12px;bottom:4px;font-size:52px;opacity:.17}.g-orange{background:linear-gradient(135deg,var(--o1),var(--o2))}.g-purple{background:linear-gradient(135deg,var(--v1),var(--v2))}.g-green{background:linear-gradient(135deg,var(--g1),var(--g2))}.g-blue{background:linear-gradient(135deg,var(--b1),var(--b2))}.g-pink{background:linear-gradient(135deg,var(--p1),var(--p2))}.g-teal{background:linear-gradient(135deg,var(--t1),var(--t2))}.g-yellow{background:linear-gradient(135deg,var(--y1),var(--y2))}.banner{height:156px;border-radius:24px;background:linear-gradient(110deg,rgba(116,92,233,.9),rgba(55,123,234,.75)),linear-gradient(135deg,#d8ccff,#bcecff);color:#fff;padding:25px;display:flex;align-items:flex-end;margin-bottom:14px;position:relative;overflow:hidden}.banner:after{content:"";position:absolute;width:270px;height:270px;border-radius:50%;background:rgba(255,255,255,.13);right:-70px;top:-100px}.banner h3{font:600 28px 'Noto Sans Lao';margin:0}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:13px}.field,.input{background:#fff;border:1px solid #ddd;border-radius:12px;padding:10px 12px;min-width:145px;outline:none}.field:focus,.input:focus{border-color:#9f8ff1;box-shadow:0 0 0 3px rgba(116,92,233,.08)}.search{flex:1;min-width:230px}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:780px}.table th,.table td{padding:12px 10px;border-bottom:1px solid #f0f0f0;text-align:left;vertical-align:middle}.table th{font:500 13px 'Noto Sans Lao';color:#666;background:#fafafa;position:sticky;top:0}.table tr:hover td{background:#fffdfd}.badge{padding:5px 9px;border-radius:999px;font-size:12px;font-weight:700;display:inline-block}.b-green{background:#eaf9f0;color:#1d8a4f}.b-orange{background:#fff1df;color:#b66b10}.b-blue{background:#eaf2ff;color:#3469c9}.b-pink{background:#ffe9f2;color:#bd3f75}.b-gray{background:#f0f0f0;color:#666}.b-purple{background:#f0ebff;color:#6d50d8}.progress{height:10px;background:#eee;border-radius:999px;overflow:hidden}.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--g1),var(--t2));border-radius:999px}.section-title{font:500 16px 'Noto Sans Lao';margin:0 0 12px}.muted{color:var(--muted)}.money{font-weight:700}.list{display:grid;gap:10px}.list-item{padding:12px;border:1px solid var(--line);border-radius:14px;display:flex;justify-content:space-between;gap:10px;align-items:center}.chart{height:225px;display:flex;align-items:end;gap:13px;padding:10px 4px 35px}.bar{flex:1;border-radius:10px 10px 4px 4px;position:relative;min-width:24px;background:linear-gradient(180deg,var(--v2),var(--b2))}.bar span{position:absolute;left:50%;transform:translateX(-50%);bottom:-32px;font-size:11px;color:#777;white-space:nowrap;text-align:center}.timeline{border-left:3px solid #d8d5ff;margin-left:8px;padding-left:18px}.tl{position:relative;margin:0 0 18px}.tl:before{content:"";position:absolute;left:-25px;top:3px;width:11px;height:11px;border-radius:50%;background:var(--v1);box-shadow:0 0 0 4px #eeeaff}.modal-back{position:fixed;inset:0;background:rgba(20,20,20,.3);backdrop-filter:blur(4px);z-index:80;display:grid;place-items:center;padding:14px}.modal{width:min(850px,96vw);max-height:91vh;overflow:auto;background:#fff;border-radius:24px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.22);animation:pop .2s ease}@keyframes pop{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-grid .full{grid-column:1/-1}.label{font-size:13px;font-weight:700;margin-bottom:5px;display:block}.input{width:100%}textarea.input{min-height:88px;resize:vertical}.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px;flex-wrap:wrap}.toast{position:fixed;right:18px;top:85px;background:#fff;border-radius:14px;padding:12px 14px;box-shadow:0 12px 35px rgba(0,0,0,.15);z-index:100;border-left:5px solid var(--g1);animation:slide .25s ease;max-width:min(420px,90vw)}@keyframes slide{from{transform:translateX(30px);opacity:0}}.loading{position:fixed;inset:0;background:rgba(255,255,255,.58);backdrop-filter:blur(2px);z-index:120;display:grid;place-items:center}.spinner{width:48px;height:48px;border:5px solid #e9e4ff;border-top-color:var(--v1);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.login{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 0 0,#fff0f7,transparent 38%),radial-gradient(circle at 100% 100%,#e7f5ff,transparent 36%),var(--bg);padding:20px}.login-wrap{width:min(500px,96vw);display:grid;grid-template-columns:1fr;background:#fff;border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:0 20px 65px rgba(0,0,0,.09)}.login-card{padding:40px;display:flex;flex-direction:column;justify-content:center}.login-card h2{font:600 24px 'Noto Sans Lao';margin:0 0 3px}.login-card .sub{color:#777;margin-bottom:24px;font-size:14px}.mode-box{border:1px solid var(--line);border-radius:18px;padding:14px;margin-top:14px;background:#fafafa}.sep{height:1px;background:#eee;margin:17px 0}.kpi-row{display:flex;gap:8px;flex-wrap:wrap}.mini{background:#fafafa;border:1px solid var(--line);border-radius:12px;padding:10px 12px}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:13px 0}.tab{border:1px solid var(--line);background:#fff;padding:8px 11px;border-radius:11px}.tab.active{background:#f0ebff;color:#6b50d9;border-color:#d8ccff;font-weight:700}.empty{text-align:center;color:#999;padding:32px}.skeleton{background:linear-gradient(90deg,#f1f1f1 25%,#fafafa 50%,#f1f1f1 75%);background-size:200% 100%;animation:sh 1.2s infinite;border-radius:12px;height:70px}@keyframes sh{to{background-position:-200% 0}}
+@media print{.sidebar,.topbar,.no-print{display:none!important}.main{margin:0;width:100%;padding:0}.card{box-shadow:none;border:0}.modal-back{position:static;background:white;display:block;padding:0}.modal{width:100%;max-height:none;box-shadow:none;padding:0}.modal .actions{display:none}}
+@media(max-width:1100px){.summary{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.three{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.sidebar{transform:translateX(-105%)}.sidebar.open{transform:none}.main{margin-left:0;width:100%;padding:12px}.hamb{display:inline-flex}.three{grid-template-columns:1fr}.topbar{top:5px}}
+@media(max-width:560px){.summary{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.page-head{flex-direction:column}.profile .who{display:none}.banner{height:130px}.banner h3{font-size:20px}.login-card{padding:24px}.mode-pill{display:none}}
+</style>
+</head>
+<body>
+<div id="loginView" class="login">
+  <div class="login-wrap">
+    <section class="login-card">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div class="logo" style="margin: 0 auto 15px;">📚</div>
+        <h2 style="font-weight: 600;">ເຂົ້າສູ່ລະບົບ</h2>
+        <div class="sub">ລະບົບບໍລິຫານຈັດການໂຄງການ</div>
+      </div>
+      <label class="label">ຊື່ຜູ້ໃຊ້ (Username)</label><input id="loginUser" class="input" autocomplete="username" onkeydown="if(event.key==='Enter')realLogin()">
+      <div style="height:10px"></div><label class="label">ລະຫັດຜ່ານ (Password)</label><input id="loginPass" type="password" class="input" autocomplete="current-password" onkeydown="if(event.key==='Enter')realLogin()">
+      <div style="height:14px"></div><button class="btn primary" style="width:100%" onclick="realLogin()">🔐 ເຂົ້າສູ່ລະບົບ</button>
+      <div style="text-align:center;margin-top:14px"><button type="button" class="btn secondary sm" style="font-size:12px;opacity:.85" onclick="openApiConfigModal()">⚙️ ຕັ້ງຄ່າ API URL (ສຳລັບ Vercel)</button></div>
+    </section>
+  </div>
+</div>
+
+<div id="appView" class="app hidden">
+  <aside id="sidebar" class="sidebar"><div class="brand"><div class="logo">📚</div><div><h1 id="brandSystem">Project Manager</h1><small id="brandSchool">ອົງກອນ</small></div></div><div class="nav-title">ເມນູຫຼັກ</div><nav class="nav" id="nav"></nav></aside>
+  <main class="main"><header class="topbar"><div class="top-left"><button class="hamb" onclick="toggleSide()">☰</button><div><div class="school" id="topSchool">ອົງກອນ</div><div class="system" id="topSystem">ລະບົບບໍລິຫານຈັດການໂຄງການ</div></div><span id="modePill" class="mode-pill real">● ລະບົບຈິງ</span></div><div class="profile"><span>🔔</span><div class="avatar" id="avatar">A</div><div class="who"><b id="who">Admin</b><div class="muted" id="roleText" style="font-size:12px"></div></div><button class="btn secondary sm" onclick="openApiConfigModal()" title="API URL Settings">⚙️</button> <button class="btn secondary sm" onclick="appLogout()">ອອກ</button></div></header><div class="content" id="content"></div></main>
+</div>
+<div id="modalRoot"></div><div id="toastRoot"></div><div id="loadingRoot"></div>
+
+<script src="config.js"></script>
+
+<script>
+const App={token:null,user:null,settings:{},departments:[],view:'dashboard',projectPage:1,projectPageSize:10,cache:{projects:[],users:[],logs:[]}};
+const MENU=[
+ ['dashboard','🏠','ໜ້າຫຼັກ',['admin','head','teacher']],['projects','📁','ໂຄງການ',['admin','head','teacher']],['activities','🗂️','ກິດຈະກຳ',['admin','head','teacher']],['budget','💰','ງົບປະມານ',['admin','head','teacher']],['expenses','🧾','ເບີກຈ່າຍ',['admin','head','teacher']],['progress','📈','ຕິດຕາມຄວາມຄືບໜ້າ',['admin','head','teacher']],['reports','📑','ລາຍງານ',['admin','head','teacher']],['files','📎','ເອກະສານ',['admin','head','teacher']],['users','👥','ຜູ້ໃຊ້ງານ',['admin']],['departments','🏢','ພະແນກ/ຝ່າຍ',['admin']],['settings','⚙️','ຕັ້ງຄ່າ',['admin']],['backup','💾','ສຳຮອງຂໍ້ມູນ',['admin']],['logs','🕘','ປະຫວັດການນຳໃຊ້',['admin']]
+];
+
+// ==================== API CONNECTOR ====================
+function getGasApiUrl() {
+  if (window.DEFAULT_GAS_API_URL && window.DEFAULT_GAS_API_URL.trim()) {
+    return window.DEFAULT_GAS_API_URL.trim();
+  }
+  return (localStorage.getItem('GAS_API_URL') || '').trim();
+}
+
+function setGasApiUrl(url) {
+  url = (url || '').trim();
+  if (url) localStorage.setItem('GAS_API_URL', url);
+  else localStorage.removeItem('GAS_API_URL');
+}
+
+function openApiConfigModal() {
+  const current = getGasApiUrl();
+  modal(`
+    <h3 class="section-title">⚙️ ຕັ້ງຄ່າ Google Apps Script API URL</h3>
+    <p class="muted" style="margin-bottom:12px;font-size:13px;line-height:1.5">
+      ເມື່ອ Deploy ໃນ Vercel / GitHub, ລະບົບຕ້ອງການລິ້ງ Web App URL (ທີ່ລົງທ້າຍດ້ວຍ <code>/exec</code>) ຈາກ Google Apps Script ເພື່ອເຊື່ອມຕໍ່ກັບ Google Sheets.
+    </p>
+    <label class="label">Google Apps Script Web App URL</label>
+    <input id="cfgApiUrl" class="input" placeholder="https://script.google.com/macros/s/.../exec" value="${attr(current)}">
+    <div style="font-size:12px;color:#888;margin-top:6px">💡 ວິທີເອົາ: ໃນ Apps Script ກົດ Deploy > Manage deployments > Copy Web App URL</div>
+    <div class="actions">
+      <button class="btn secondary" onclick="closeModal()">ປິດ</button>
+      <button class="btn primary" onclick="saveApiConfig()">💾 ບັນທຶກ</button>
+    </div>
+  `);
+}
+
+function saveApiConfig() {
+  const u = val('cfgApiUrl');
+  if (!u) {
+    setGasApiUrl('');
+    toast('ລຶບ URL ແລ້ວ');
+  } else if (!u.startsWith('https://script.google.com/macros/s/')) {
+    return toast('URL ຕ້ອງຂຶ້ນຕົ້ນດ້ວຍ https://script.google.com/macros/s/...', 'error');
+  } else {
+    setGasApiUrl(u);
+    toast('ບັນທຶກ Web App URL ຮຽບຮ້ອຍແລ້ວ! ✅');
+  }
+  closeModal();
+}
+
+async function callBackend(action, ...args) {
+  // 1. ຖ້າເປີດໃນ Google Apps Script Web App ໂດຍກົງ
+  if (typeof google !== 'undefined' && google.script && google.script.run) {
+    return new Promise((resolve, reject) => {
+      const runner = google.script.run
+        .withSuccessHandler(resolve)
+        .withFailureHandler(function(err){ reject(new Error(err ? (err.message || err) : 'Error')); });
+      if (typeof runner[action] !== 'function') {
+        reject(new Error('Function "' + action + '" ບໍ່ພົບໃນ Google Apps Script'));
+        return;
+      }
+      runner[action].apply(runner, args);
+    });
+  }
+
+  // 2. ຖ້າເປີດໃນ Vercel / Localhost -> ເອີ້ນຜ່ານ HTTP POST Fetch
+  const apiUrl = getGasApiUrl();
+  if (!apiUrl) {
+    openApiConfigModal();
+    throw new Error('ກະລຸນາກຳນົດ Web App URL ຂອງ Google Apps Script ກ່ອນ (ຄລິກປຸ່ມ ⚙️)');
+  }
+
+  const res = await fetch(apiUrl, {
+    method: 'POST',
+    redirect: 'follow',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8'
+    },
+    body: JSON.stringify({ action: action, args: args })
+  });
+
+  if (!res.ok) {
+    throw new Error('ເຊີບເວີຕອບກັບດ້ວຍລະຫັດ: ' + res.status);
+  }
+
+  const json = await res.json();
+  return json;
+}
+
+// ---------------- API ROUTER ----------------
+async function api(method,...args){
+ showLoading(true);
+ try{
+  const res = await callBackend(method, App.token, ...args);
+  if(!res || !res.success) throw new Error(res ? res.message : 'ເກີດຂໍ້ຜິດພາດ');
+  return res.data;
+ }catch(e){
+  toast(e.message || String(e),'error');
+  if(String(e.message || '').indexOf('ໝົດອາຍຸ') >= 0) appLogout(true);
+  throw e;
+ }
+ finally{showLoading(false)}
+}
+
+// ---------------- AUTH ----------------
+function val(id){
+  var el = document.getElementById(id);
+  if(!el) return '';
+  return el.value ? el.value.trim() : '';
+}
+
+async function realLogin(){
+  var u = val('loginUser');
+  var p = val('loginPass');
+  if(!u || !p) return toast('ກະລຸນາປ້ອນ Username ແລະ Password', 'error');
+
+  showLoading(true);
+  try {
+    const res = await callBackend('login', u, p);
+    if(!res || !res.success) throw new Error(res ? res.message : 'ຊື່ຜູ້ໃຊ້ ຫຼື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ');
+    
+    App.token = res.data.token;
+    App.user = res.data.user;
+    App.settings = res.data.settings || {};
+    try {
+      const boot = await api('getAppBootstrap');
+      if (boot) {
+        App.departments = boot.departments || [];
+        App.settings = boot.settings || App.settings;
+      }
+    } catch(errBoot) {
+      console.warn('Bootstrap note:', errBoot);
+    }
+    enterApp();
+  } catch(e) {
+    toast(e.message || String(e), 'error');
+  } finally {
+    showLoading(false);
+  }
+}
+
+function enterApp(){
+ document.getElementById('loginView').classList.add('hidden');
+ document.getElementById('appView').classList.remove('hidden');
+ applyBrand();
+ buildNav();
+ go('dashboard');
+}
+
+async function appLogout(silent){
+ try{ if(App.token && !silent) await callBackend('logout', App.token); }catch(e){}
+ App.token = null; App.user = null;
+ document.getElementById('appView').classList.add('hidden');
+ document.getElementById('loginView').classList.remove('hidden');
+ document.getElementById('modalRoot').innerHTML = '';
+}
+
+function applyBrand(){
+ const s = App.settings || {};
+ setText('brandSystem', s.systemName || 'ລະບົບບໍລິຫານຈັດການໂຄງການ');
+ setText('brandSchool', s.schoolName || 'ອົງກອນ');
+ setText('topSchool', s.schoolName || 'ອົງກອນ');
+ setText('topSystem', s.systemName || 'ລະບົບບໍລິຫານຈັດການໂຄງການ');
+ setText('who', (App.user && App.user.fullName) || (App.user && App.user.username) || 'User');
+ setText('roleText', roleLabel(App.user ? App.user.role : ''));
+ setText('avatar', App.user && App.user.fullName ? App.user.fullName.charAt(0) : 'A');
+}
+
+function roleLabel(r){
+ return r==='admin' ? 'ຜູ້ດູແລລະບົບ' : r==='head' ? 'ຫົວໜ້າພະແນກ/ຝ່າຍ' : 'ຜູ້ໃຊ້ງານທົ່ວໄປ';
+}
+
+// ---------------- NAVIGATION ----------------
+function buildNav(){
+ if(!App.user) return;
+ document.getElementById('nav').innerHTML = MENU.filter(m => m[3].includes(App.user.role)).map(m => `<a href="#" data-v="${m[0]}" onclick="go('${m[0]}');return false"><span class="ico">${m[1]}</span>${m[2]}</a>`).join('');
+}
+
+function go(v){
+ App.view = v;
+ document.querySelectorAll('.nav a').forEach(a => a.classList.toggle('active', a.dataset.v === v));
+ document.getElementById('sidebar').classList.remove('open');
+ const map = { dashboard:renderDashboard, projects:renderProjects, activities:renderActivities, budget:renderBudget, expenses:renderExpenses, progress:renderProgress, reports:renderReports, files:renderFiles, users:renderUsers, departments:renderDepartments, settings:renderSettings, backup:renderBackup, logs:renderLogs };
+ (map[v] || renderDashboard)();
+}
+
+function toggleSide(){ document.getElementById('sidebar').classList.toggle('open'); }
+
+// ---------------- DASHBOARD ----------------
+async function renderDashboard(){
+ skeletonPage();
+ try{
+  const d = await api('getDashboard',{});
+  const s = d.summary || {};
+  document.getElementById('content').innerHTML = `
+   <div class="page">
+    <div class="banner">
+     <div><div style="opacity:.86">ປີງົບປະມານ ${esc(App.settings.defaultFiscalYear || '')}</div><h3>ພາບລວມການບໍລິຫານຈັດການໂຄງການ</h3></div>
+    </div>
+    <div class="grid summary">
+     ${metric('ໂຄງການທັງໝົດ', s.totalProjects||0, '📁', 'g-orange')}
+     ${metric('ກຳລັງດຳເນີນງານ', s.ongoing||0, '⚙️', 'g-purple')}
+     ${metric('ສຳເລັດ', s.completed||0, '✅', 'g-green')}
+     ${metric('ຫຼ້າຊ້າ', s.delayed||0, '⏰', 'g-pink')}
+     ${metric('ງົບປະມານທັງໝົດ', money(s.totalBudget), '💰', 'g-blue')}
+     ${metric('ເບີກຈ່າຍແລ້ວ', money(s.spent), '🧾', 'g-teal')}
+     ${metric('ງົບຄົງເຫຼືອ', money(s.remaining), '🏦', 'g-green')}
+     ${metric('ເປີເຊັນເບີກຈ່າຍ', (s.spendingPercent||0)+'%', '📊', 'g-yellow')}
+    </div>
+    <div class="grid two" style="margin-top:14px">
+     <div class="card"><h3 class="section-title">ຈຳນວນໂຄງການແຍກຕາມພະແນກ</h3>${barChart(d.byDepartment||[])}</div>
+     <div class="card"><h3 class="section-title">ໂຄງການລ່າສຸດ</h3><div class="list">${(d.latestProjects||[]).map(p => `<div class="list-item"><div><b>${esc(p.projectName)}</b><div class="muted">${esc(p.departmentName||'')}</div></div><span>${statusBadge(p.status)}</span></div>`).join('')||empty('ຍັງບໍ່ມີໂຄງການ')}</div></div>
+    </div>
+    <div class="grid two" style="margin-top:14px">
+     <div class="card"><h3 class="section-title">ຄວາມຄືບໜ້າໂຄງການ</h3><div class="list">${(d.latestProjects||[]).map(p => `<div><div style="display:flex;justify-content:space-between;gap:10px"><span>${esc(p.projectName)}</span><b>${num(p.progressPercent)}%</b></div><div class="progress"><i style="width:${clamp(num(p.progressPercent),0,100)}%"></i></div></div>`).join('')||empty('ບໍ່ມີຂໍ້ມູນ')}</div></div>
+     <div class="card"><h3 class="section-title">ລາຍການເບີກຈ່າຍລ່າສຸດ</h3><div class="list">${(d.recentExpenses||[]).map(e => `<div class="list-item"><div><b>${esc(e.description)}</b><div class="muted">${esc(e.projectName||'')}</div></div><div class="money">${money(e.amount)}</div></div>`).join('')||empty('ບໍ່ມີລາຍການ')}</div></div>
+    </div>
+   </div>`;
+ }catch(e){}
+}
+
+function metric(t,n,i,g){ return `<div class="card metric ${g}"><small>${t}</small><div class="num">${n}</div><div class="bigico">${i}</div></div>`; }
+function barChart(rows){
+ if(!rows.length) return empty('ຍັງບໍ່ມີຂໍ້ມູນ');
+ const max = Math.max(...rows.map(x => Number(x.value)||0), 1);
+ return `<div class="chart">${rows.map(x => `<div class="bar" style="height:${55 + (Number(x.value)/max*120)}px"><span>${esc(x.label || x.key)}<br><b>${formatNumber(x.value)}</b></span></div>`).join('')}</div>`;
+}
+
+// ---------------- PROJECTS ----------------
+async function renderProjects(){
+ document.getElementById('content').innerHTML = `
+  <div class="page">
+   <div class="page-head"><div><h2>ໂຄງການ</h2><p>ເພີ່ມ ແກ້ໄຂ ສຳເນົາ ຄົ້ນຫາ ແລະ ຕິດຕາມໂຄງການ</p></div><button class="btn primary" onclick="openProjectForm()">➕ ເພີ່ມໂຄງການ</button></div>
+   <div class="toolbar">
+    <input id="pq" class="field search" placeholder="ຄົ້ນຫາລະຫັດ/ຊື່ໂຄງການ">
+    <select id="py" class="field"><option value="">ທຸກປີງົບປະມານ</option><option>${esc(App.settings.defaultFiscalYear||'2026')}</option></select>
+    <select id="pd" class="field"><option value="">ທຸກພະແນກ</option>${App.departments.map(d => `<option value="${d.departmentId}">${esc(d.name)}</option>`).join('')}</select>
+    <select id="ps" class="field"><option value="">ທຸກສະຖານະ</option><option>ກຳລັງດຳເນີນງານ</option><option>ສຳເລັດ</option><option>ຫຼ້າຊ້າ</option></select>
+    <select id="pSort" class="field" onchange="loadProjectTable()"><option value="updated">ແກ້ໄຂລ່າສຸດ</option><option value="name">ຊື່ໂຄງການ A-Z</option><option value="budgetDesc">ງົບປະມານຫຼາຍ→ໜ້ອຍ</option><option value="progressDesc">ຄວາມຄືບໜ້າຫຼາຍ→ໜ້ອຍ</option></select>
+    <select id="pSize" class="field" onchange="App.projectPageSize=Number(this.value);renderProjectPage(1)"><option value="10">10/ໜ້າ</option><option value="20">20/ໜ້າ</option><option value="50">50/ໜ້າ</option></select>
+    <button class="btn primary" onclick="loadProjectTable()">🔎 ຄົ້ນຫາ</button>
+    <button class="btn secondary" onclick="clearProjectFilters()">ລ້າງ</button>
+   </div>
+   <div id="projectTable" class="card"><div class="skeleton"></div></div>
+  </div>`;
+ await loadProjectTable();
+}
+
+async function loadProjectTable(){
+ try{
+  const f = { search:val('pq'), fiscalYear:val('py'), departmentId:val('pd'), status:val('ps') };
+  const rows = await api('listProjects', f);
+  const sort = val('pSort') || 'updated';
+  rows.sort((a,b) => sort==='name' ? String(a.projectName).localeCompare(String(b.projectName),'lo') : sort==='budgetDesc' ? num(b.budget)-num(a.budget) : sort==='progressDesc' ? num(b.progressPercent)-num(a.progressPercent) : String(b.updatedAt||'').localeCompare(String(a.updatedAt||'')));
+  App.cache.projects = rows;
+  renderProjectPage(1);
+ }catch(e){}
+}
+
+function renderProjectPage(page){
+ const rows = App.cache.projects || [];
+ const size = App.projectPageSize || 10;
+ const total = Math.max(1, Math.ceil(rows.length/size));
+ App.projectPage = Math.min(Math.max(1, page), total);
+ const start = (App.projectPage-1) * size;
+ const slice = rows.slice(start, start+size);
+ const host = document.getElementById('projectTable');
+ if(!host) return;
+ host.innerHTML = projectTable(slice) + `<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px"><span class="muted">ທັງໝົດ ${rows.length} ລາຍການ • ໜ້າ ${App.projectPage}/${total}</span><div><button class="btn secondary sm" ${App.projectPage<=1?'disabled':''} onclick="renderProjectPage(${App.projectPage-1})">← ກ່ອນໜ້າ</button> <button class="btn secondary sm" ${App.projectPage>=total?'disabled':''} onclick="renderProjectPage(${App.projectPage+1})">ຖັດໄປ →</button></div></div>`;
+}
+
+function clearProjectFilters(){
+ ['pq','py','pd','ps'].forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
+ loadProjectTable();
+}
+
+function projectTable(rows){
+ if(!rows.length) return empty('ບໍ່ພົບໂຄງການ');
+ return `<div class="table-wrap"><table class="table"><thead><tr><th>ລະຫັດ</th><th>ຊື່ໂຄງການ</th><th>ພະແນກ</th><th>ງົບປະມານ</th><th>ສະຖານະ</th><th>ຄືບໜ້າ</th><th>ຈັດການ</th></tr></thead><tbody>${rows.map(p => `<tr><td>${esc(p.projectCode)}</td><td><b>${esc(p.projectName)}</b><div class="muted">${esc(p.ownerName || '')}</div></td><td>${esc(p.departmentName||'')}</td><td>${money(p.budget)}</td><td>${statusBadge(p.status)}</td><td><div style="min-width:100px"><b>${num(p.progressPercent)}%</b><div class="progress"><i style="width:${clamp(num(p.progressPercent),0,100)}%"></i></div></div></td><td><div style="display:flex;gap:5px;flex-wrap:wrap"><button class="btn secondary sm" onclick="openProjectDetail('${p.projectId}')">ເບິ່ງ</button><button class="btn warn sm" onclick="editProject('${p.projectId}')">ແກ້ໄຂ</button><button class="btn purple sm" onclick="copyProjectAction('${p.projectId}')">ສຳເນົາ</button><button class="btn danger sm" onclick="deleteProjectAction('${p.projectId}')">ລຶບ</button></div></td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function openProjectForm(p={}){
+ const depOptions = App.departments.map(d => `<option value="${d.departmentId}" ${d.departmentId===p.departmentId?'selected':''}>${esc(d.name)}</option>`).join('');
+ const codeValue = p.projectCode || 'PRJ-' + (App.settings.defaultFiscalYear || '2026') + '-' + String((App.cache.projects && App.cache.projects.length ? App.cache.projects.length : 0) + 1).padStart(3,'0');
+ 
+ modal(`
+  <h3 class="section-title">${p.projectId?'ແກ້ໄຂ':'ເພີ່ມ'}ໂຄງການ</h3>
+  <div class="form-grid">
+   <div><label class="label">ລະຫັດໂຄງການ *</label><input id="fCode" class="input" value="${attr(codeValue)}"></div>
+   <div><label class="label">ປີງົບປະມານ *</label><input id="fYear" class="input" value="${attr(p.fiscalYear || App.settings.defaultFiscalYear || '2026')}"></div>
+   <div class="full"><label class="label">ຊື່ໂຄງການ *</label><input id="fName" class="input" value="${attr(p.projectName||'')}"></div>
+   <div><label class="label">ແຜນງານ</label><input id="fPlan" class="input" value="${attr(p.planName||'')}"></div>
+   <div><label class="label">ພະແນກ</label><select id="fDept" class="input">${depOptions}</select></div>
+   <div class="full"><label class="label">ຜູ້ຮ່ວມຮັບຜິດຊອບ (User ID ຄັ່ນດ້ວຍ ,)</label><input id="fCo" class="input" value="${attr(p.coOwners||'')}"></div>
+   <div class="full"><label class="label">ຫຼັກການ ແລະ ເຫດຜົນ</label><textarea id="fRationale" class="input">${esc(p.rationale||'')}</textarea></div>
+   <div class="full"><label class="label">ຈຸດປະສົງ</label><textarea id="fObjectives" class="input">${esc(p.objectives||'')}</textarea></div>
+   <div><label class="label">ເປົ້າໝາຍທາງປະລິມານ</label><textarea id="fQT" class="input">${esc(p.quantitativeTarget||'')}</textarea></div>
+   <div><label class="label">ເປົ້າໝາຍທາງຄຸນນະພາບ</label><textarea id="fQL" class="input">${esc(p.qualitativeTarget||'')}</textarea></div>
+   <div><label class="label">ກຸ່ມເປົ້າໝາຍ</label><input id="fTarget" class="input" value="${attr(p.targetGroup||'')}"></div>
+   <div><label class="label">ສະຖານທີ່ດຳເນີນການ</label><input id="fLoc" class="input" value="${attr(p.location||'')}"></div>
+   <div><label class="label">ວັນທີເລີ່ມຕົ້ນ</label><input id="fStart" class="input" type="date" value="${dateForInput(p.startDate)}"></div>
+   <div><label class="label">ວັນທີສິ້ນສຸດ</label><input id="fEnd" class="input" type="date" value="${dateForInput(p.endDate)}"></div>
+   <div><label class="label">ງົບປະມານ</label><input id="fBudget" class="input" type="number" min="0" value="${num(p.budget)}"></div>
+   <div><label class="label">ແຫຼ່ງງົບປະມານ</label><input id="fSource" class="input" value="${attr(p.budgetSource||'')}"></div>
+   <div class="full"><label class="label">ຕົວຊີ້ວັດຄວາມສຳເລັດ</label><textarea id="fIndicator" class="input">${esc(p.successIndicators||'')}</textarea></div>
+   <div class="full"><label class="label">ຜົນທີ່ຄາດວ່າຈະໄດ້ຮັບ</label><textarea id="fExpected" class="input">${esc(p.expectedResults||'')}</textarea></div>
+   <div><label class="label">ສະຖານະ</label><select id="fStatus" class="input">${['ກຳລັງດຳເນີນງານ','ສຳເລັດ','ຫຼ້າຊ້າ'].map(x => `<option ${x===p.status?'selected':''}>${x}</option>`).join('')}</select></div>
+   <div><label class="label">ຄວາມຄືບໜ້າ %</label><input id="fProgress" type="number" min="0" max="100" class="input" value="${num(p.progressPercent)}"></div>
+   <div class="full"><label class="label">ໝາຍເຫດ</label><textarea id="fNote" class="input">${esc(p.note||'')}</textarea></div>
+  </div>
+  <div class="actions">
+   <button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button>
+   <button class="btn success" onclick="saveProjectForm('${p.projectId||''}','${p.ownerUserId||''}')">💾 ບັນທຶກ</button>
+  </div>`);
+}
+
+async function saveProjectForm(id, owner){
+ const d = {
+  projectId: id || '', projectCode: val('fCode'), projectName: val('fName'), fiscalYear: val('fYear'),
+  planName: val('fPlan'), departmentId: val('fDept'), ownerUserId: owner || App.user.userId,
+  coOwners: val('fCo'), rationale: val('fRationale'), objectives: val('fObjectives'),
+  quantitativeTarget: val('fQT'), qualitativeTarget: val('fQL'), targetGroup: val('fTarget'),
+  location: val('fLoc'), startDate: val('fStart'), endDate: val('fEnd'), budget: num(val('fBudget')),
+  budgetSource: val('fSource'), successIndicators: val('fIndicator'), expectedResults: val('fExpected'),
+  status: val('fStatus'), progressPercent: num(val('fProgress')), note: val('fNote')
+ };
+ try{
+  await api('saveProject', d);
+  closeModal(); toast('ບັນທຶກໂຄງການແລ້ວ'); await loadProjectTable();
+ }catch(e){}
+}
+
+async function editProject(id){ try{ const d = await api('getProjectDetail', id); openProjectForm(d.project); }catch(e){} }
+async function copyProjectAction(id){ if(!confirm('ຕ້ອງການສຳເນົາໂຄງການນີ້ຫຼືບໍ່?')) return; try{ await api('copyProject', id); toast('ສຳເນົາໂຄງການແລ້ວ'); loadProjectTable(); }catch(e){} }
+async function deleteProjectAction(id){ if(!confirm('ຢືນຢັນການລຶບໂຄງການ ແລະ ຂໍ້ມູນທີ່ກ່ຽວຂ້ອງທັງໝົດ?')) return; try{ await api('deleteProject', id); toast('ລຶບໂຄງການແລ້ວ'); loadProjectTable(); }catch(e){} }
+
+async function openProjectDetail(id){
+ try{
+  const d = await api('getProjectDetail', id);
+  const p = d.project; const b = d.budget;
+  modal(`
+   <h3 class="section-title">${esc(p.projectName)}</h3>
+   <div class="kpi-row">
+    <div class="mini"><b>ງົບປະມານ</b><br>${money(b.budget)}</div>
+    <div class="mini"><b>ເບີກຈ່າຍ</b><br>${money(b.spent)}</div>
+    <div class="mini"><b>ຄົງເຫຼືອ</b><br>${money(b.remaining)}</div>
+    <div class="mini"><b>ຄືບໜ້າ</b><br>${num(p.progressPercent)}%</div>
+   </div>
+   <div class="tabs">
+    <button class="tab active">ຂໍ້ມູນພື້ນຖານ</button>
+    <button class="tab" onclick="closeModal();go('activities')">ກິດຈະກຳ</button>
+    <button class="tab" onclick="closeModal();go('expenses')">ເບີກຈ່າຍ</button>
+    <button class="tab" onclick="closeModal();go('progress')">ຄວາມຄືບໜ້າ</button>
+    <button class="tab" onclick="closeModal();go('files')">ເອກະສານ</button>
+   </div>
+   <div class="card" style="box-shadow:none">
+    <p><b>ລະຫັດ:</b> ${esc(p.projectCode)}</p>
+    <p><b>ພະແນກ:</b> ${esc(p.departmentName||'')}</p>
+    <p><b>ຜູ້ຮັບຜິດຊອບ:</b> ${esc(p.ownerName||'')}</p>
+    <p><b>ໄລຍະເວລາ:</b> ${esc(p.startDate||'-')} ເຖິງ ${esc(p.endDate||'-')}</p>
+    <p><b>ຈຸດປະສົງ:</b><br>${nl(p.objectives||'-')}</p>
+    <p><b>ຕົວຊີ້ວັດ:</b><br>${nl(p.successIndicators||'-')}</p>
+   </div>
+   <h4>Timeline ລ່າສຸດ</h4>
+   <div class="timeline">${d.progress && d.progress.length ? d.progress.map(g => `<div class="tl"><b>${esc(g.reportDate)} — ${num(g.progressPercent)}%</b><div>${nl(g.detail)}</div></div>`).join('') : empty('ຍັງບໍ່ມີການບັນທຶກຄວາມຄືບໜ້າ')}</div>
+   <div class="actions">
+    <button class="btn secondary" onclick="closeModal()">ປິດ</button>
+    <button class="btn warn" onclick="closeModal();editProject('${id}')">ແກ້ໄຂ</button>
+   </div>`);
+ }catch(e){}
+}
+
+// ---------------- ACTIVITIES ----------------
+async function renderActivities(){
+ document.getElementById('content').innerHTML = moduleShell('ກິດຈະກຳຍ່ອຍ','ກິດຈະກຳພາຍໃຕ້ໂຄງການ ພ້ອມງົບປະມານ ແລະ ເປີເຊັນຄວາມສຳເລັດ','<button class="btn primary" onclick="openActivityForm()">➕ ເພີ່ມກິດຈະກຳ</button>','activityBody');
+ try{
+  App.cache.projects = await api('listProjects',{});
+  const all = await api('listActivities','');
+  document.getElementById('activityBody').innerHTML = activityTable(all);
+ }catch(e){}
+}
+
+function activityTable(rows){
+ if(!rows.length) return empty('ຍັງບໍ່ມີກິດຈະກຳ');
+ return `<div class="table-wrap"><table class="table"><thead><tr><th>ໂຄງການ</th><th>ກິດຈະກຳ</th><th>ຜູ້ຮັບຜິດຊອບ</th><th>ງົບປະມານ</th><th>ສຳເລັດ</th><th>ສະຖານະ</th><th>ຈັດການ</th></tr></thead><tbody>${rows.map(a => `<tr><td>${esc(a.projectName || '')}</td><td><b>${esc(a.activityName)}</b></td><td>${esc(a.owner || '')}</td><td>${money(a.budget)}</td><td>${num(a.successPercent)}%</td><td>${statusBadge(a.status)}</td><td><button class="btn warn sm" onclick='openActivityForm(${JSON.stringify(a).replace(/'/g,"&#39;")})'>ແກ້ໄຂ</button> <button class="btn danger sm" onclick="deleteActivityAction('${a.activityId}')">ລຶບ</button></td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function openActivityForm(a={}){
+ const ps = App.cache.projects || [];
+ modal(`
+  <h3 class="section-title">${a.activityId?'ແກ້ໄຂ':'ເພີ່ມ'}ກິດຈະກຳ</h3>
+  <div class="form-grid">
+   <div class="full"><label class="label">ໂຄງການ</label><select id="aProject" class="input">${ps.map(p => `<option value="${p.projectId}" ${p.projectId===a.projectId?'selected':''}>${esc(p.projectName)}</option>`).join('')}</select></div>
+   <div class="full"><label class="label">ຊື່ກິດຈະກຳ *</label><input id="aName" class="input" value="${attr(a.activityName||'')}"></div>
+   <div class="full"><label class="label">ລາຍລະອຽດ</label><textarea id="aDesc" class="input">${esc(a.description||'')}</textarea></div>
+   <div><label class="label">ຜູ້ຮັບຜິດຊອບ</label><input id="aOwner" class="input" value="${attr(a.owner || (App.user ? App.user.fullName : ''))}"></div>
+   <div><label class="label">ງົບປະມານກິດຈະກຳ</label><input id="aBudget" type="number" class="input" value="${num(a.budget)}"></div>
+   <div><label class="label">ວັນທີເລີ່ມ</label><input id="aStart" type="date" class="input" value="${dateForInput(a.startDate)}"></div>
+   <div><label class="label">ວັນທີສິ້ນສຸດ</label><input id="aEnd" type="date" class="input" value="${dateForInput(a.endDate)}"></div>
+   <div><label class="label">ຄວາມສຳເລັດ %</label><input id="aPct" type="number" min="0" max="100" class="input" value="${num(a.successPercent)}"></div>
+   <div><label class="label">ສະຖານະ</label><select id="aStatus" class="input">${['ກຳລັງດຳເນີນງານ','ສຳເລັດ','ຫຼ້າຊ້າ'].map(x => `<option ${x===a.status?'selected':''}>${x}</option>`).join('')}</select></div>
+   <div class="full"><label class="label">ຜົນການດຳເນີນງານ</label><textarea id="aResult" class="input">${esc(a.result||'')}</textarea></div>
+   <div class="full"><label class="label">ໝາຍເຫດ</label><textarea id="aNote" class="input">${esc(a.note||'')}</textarea></div>
+  </div>
+  <div class="actions">
+   <button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button>
+   <button class="btn success" onclick="saveActivityForm('${a.activityId||''}')">ບັນທຶກ</button>
+  </div>`);
+}
+
+async function saveActivityForm(id){
+ const d = { activityId:id||'', projectId:val('aProject'), activityName:val('aName'), description:val('aDesc'), owner:val('aOwner'), startDate:val('aStart'), endDate:val('aEnd'), budget:num(val('aBudget')), result:val('aResult'), successPercent:num(val('aPct')), status:val('aStatus'), note:val('aNote') };
+ try{ await api('saveActivity', d); closeModal(); toast('ບັນທຶກກິດຈະກຳແລ້ວ'); renderActivities(); }catch(e){}
+}
+
+async function deleteActivityAction(id){ if(!confirm('ລຶບກິດຈະກຳນີ້ຫຼືບໍ່?')) return; try{ await api('deleteActivity', id); toast('ລຶບກິດຈະກຳແລ້ວ'); renderActivities(); }catch(e){} }
+
+// ---------------- BUDGET ----------------
+async function renderBudget(){
+ document.getElementById('content').innerHTML = moduleShell('ງົບປະມານ','ງົບທີ່ໄດ້ຮັບ ງົບກິດຈະກຳ ເບີກຈ່າຍ ຄົງເຫຼືອ ແລະ ເປີເຊັນການນຳໃຊ້','', 'budgetBody');
+ try{
+  const ps = await api('listProjects',{});
+  document.getElementById('budgetBody').innerHTML = `<div class="grid three">${ps.map(p => {
+   const b = p.budgetSummary || {};
+   return `<div class="card click-card" onclick="openProjectDetail('${p.projectId}')">
+    <div class="muted">${esc(p.projectCode)}</div><h3 class="section-title">${esc(p.projectName)}</h3>
+    <div class="money" style="font-size:20px">${money(b.budget !== undefined ? b.budget : p.budget)}</div>
+    <div class="muted">ງົບກິດຈະກຳ ${money(b.activityBudget)} • ເບີກຈ່າຍ ${money(b.spent)} • ຄົງເຫຼືອ ${money(b.remaining)}</div>
+    <div class="progress" style="margin-top:10px"><i style="width:${clamp(num(b.percent),0,100)}%"></i></div>
+    <div style="margin-top:7px"><b>${num(b.percent)}%</b> ນຳໃຊ້ແລ້ວ</div>
+   </div>`;
+  }).join('') || empty('ບໍ່ມີຂໍ້ມູນ')}</div>`;
+ }catch(e){}
+}
+
+// ---------------- EXPENSES ----------------
+async function renderExpenses(){
+ document.getElementById('content').innerHTML = moduleShell('ເບີກຈ່າຍ','ບັນທຶກລາຍການຄ່າໃຊ້ຈ່າຍ ແລະ ຄວບຄຸມບໍ່ໃຫ້ເກີນງົບປະມານ','<button class="btn primary" onclick="openExpenseForm()">➕ ເພີ່ມລາຍການເບີກຈ່າຍ</button>','expenseBody');
+ try{
+  App.cache.projects = await api('listProjects',{});
+  const rows = await api('listExpenses',{});
+  document.getElementById('expenseBody').innerHTML = expenseTable(rows);
+ }catch(e){}
+}
+
+function expenseTable(rows){
+ if(!rows.length) return empty('ຍັງບໍ່ມີລາຍການເບີກຈ່າຍ');
+ return `<div class="table-wrap"><table class="table"><thead><tr><th>ວັນທີ</th><th>ໂຄງການ</th><th>ລາຍລະອຽດ</th><th>ປະເພດ</th><th>ເອກະສານ</th><th>ຈຳນວນເງິນ</th><th>ສະຖານະ</th><th>ຈັດການ</th></tr></thead><tbody>${rows.map(e => {
+  const pName = e.projectName || (App.cache.projects && App.cache.projects.find(p=>p.projectId===e.projectId) ? App.cache.projects.find(p=>p.projectId===e.projectId).projectName : '');
+  return `<tr><td>${esc(e.expenseDate||'')}</td><td>${esc(pName)}</td><td><b>${esc(e.description)}</b></td><td>${esc(e.expenseType || '')}</td><td>${esc(e.documentNo||'')}</td><td class="money">${money(e.amount)}</td><td>${statusBadge(e.status)}</td><td><button class="btn warn sm" onclick='openExpenseForm(${JSON.stringify(e).replace(/'/g,"&#39;")})'>ແກ້ໄຂ</button> <button class="btn danger sm" onclick="deleteExpenseAction('${e.expenseId}')">ລຶບ</button></td></tr>`;
+ }).join('')}</tbody></table></div>`;
+}
+
+async function openExpenseForm(e={}){
+ if(!App.cache.projects || !App.cache.projects.length) App.cache.projects = await api('listProjects',{});
+ modal(`
+  <h3 class="section-title">${e.expenseId?'ແກ້ໄຂ':'ເພີ່ມ'}ລາຍການເບີກຈ່າຍ</h3>
+  <div class="form-grid">
+   <div class="full"><label class="label">ໂຄງການ</label><select id="eProject" class="input" onchange="expenseProjectChanged()">${App.cache.projects.map(p => `<option value="${p.projectId}" ${p.projectId===e.projectId?'selected':''}>${esc(p.projectName)}</option>`).join('')}</select></div>
+   <div><label class="label">ເລກທີລາຍການ</label><input id="eNo" class="input" value="${attr(e.itemNo || 'EXP-'+Date.now().toString().slice(-6))}"></div>
+   <div><label class="label">ວັນທີ</label><input id="eDate" type="date" class="input" value="${dateForInput(e.expenseDate) || todayISO()}"></div>
+   <div class="full"><label class="label">ລາຍລະອຽດ *</label><input id="eDesc" class="input" value="${attr(e.description||'')}"></div>
+   <div><label class="label">ປະເພດຄ່າໃຊ້ຈ່າຍ</label><select id="eType" class="input">${['ວັດສະດຸ','ດຳເນີນງານ','ອຸປະກອນ','ຄ່າຕອບແທນ','ອື່ນໆ'].map(x => `<option ${x===e.expenseType?'selected':''}>${x}</option>`).join('')}</select></div>
+   <div><label class="label">ຈຳນວນເງິນ *</label><input id="eAmount" type="number" min="0" class="input" value="${num(e.amount)}"></div>
+   <div><label class="label">ເລກທີເອກະສານ</label><input id="eDoc" class="input" value="${attr(e.documentNo||'')}"></div>
+   <div><label class="label">ຜູ້ເບີກ</label><input id="eReq" class="input" value="${attr(e.requester || (App.user ? App.user.fullName : ''))}"></div>
+   <div><label class="label">ສະຖານະ</label><select id="eStatus" class="input">${['ລໍຖ້າກວດສອບ','ອະນຸມັດ','ຍົກເລີກ'].map(x => `<option ${x===e.status?'selected':''}>${x}</option>`).join('')}</select></div>
+   <div class="full"><label class="label">ໝາຍເຫດ</label><textarea id="eNote" class="input">${esc(e.note||'')}</textarea></div>
+  </div>
+  <div id="expenseBudgetHint" class="mode-box" style="margin-top:12px"></div>
+  <div class="actions">
+   <button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button>
+   <button class="btn success" onclick="saveExpenseForm('${e.expenseId||''}','${e.activityId||''}')">ບັນທຶກ</button>
+  </div>`);
+ expenseProjectChanged();
+}
+
+function expenseProjectChanged(){
+ const p = App.cache.projects.find(x => x.projectId === val('eProject'));
+ if(p){
+  const b = p.budgetSummary || {};
+  document.getElementById('expenseBudgetHint').innerHTML = `ງົບປະມານ <b>${money(b.budget !== undefined ? b.budget : p.budget)}</b> • ໃຊ້ແລ້ວ <b>${money(b.spent)}</b> • ຄົງເຫຼືອ <b>${money(b.remaining)}</b>`;
+ }
+}
+
+async function saveExpenseForm(id,activityId){
+ const d = { expenseId:id||'', projectId:val('eProject'), activityId:activityId||'', itemNo:val('eNo'), expenseDate:val('eDate'), description:val('eDesc'), expenseType:val('eType'), amount:num(val('eAmount')), documentNo:val('eDoc'), requester:val('eReq'), status:val('eStatus'), note:val('eNote') };
+ try{ await api('saveExpense', d); closeModal(); toast('ບັນທຶກລາຍການເບີກຈ່າຍແລ້ວ'); renderExpenses(); }catch(e){}
+}
+async function deleteExpenseAction(id){ if(!confirm('ລຶບລາຍການເບີກຈ່າຍນີ້ຫຼືບໍ່?')) return; try{ await api('deleteExpense', id); toast('ລຶບລາຍການແລ້ວ'); renderExpenses(); }catch(e){} }
+
+// ---------------- PROGRESS ----------------
+async function renderProgress(){
+ document.getElementById('content').innerHTML = moduleShell('ຕິດຕາມຄວາມຄືບໜ້າ','ບັນທຶກຄວາມຄືບໜ້າ ຜົນງານ ບັນຫາ ອຸປະສັກ ແລະ ແນວທາງແກ້ໄຂ','<button class="btn primary" onclick="openProgressForm()">➕ ບັນທຶກຄວາມຄືບໜ້າ</button>','progressBody');
+ try{
+  App.cache.projects = await api('listProjects',{});
+  const all = await api('listProgress','');
+  document.getElementById('progressBody').innerHTML = `<div class="timeline">${all.length ? all.map(g => `<div class="tl"><b>${esc(g.projectName)} —${num(g.progressPercent)}%</b><div class="muted">${esc(g.reportDate)}</div><div>${nl(g.detail||'')}</div><div style="margin-top:6px"><button class="btn danger sm" onclick="deleteProgressAction('${g.progressId}')">ລຶບ</button></div></div>`).join('') : empty('ຍັງບໍ່ມີຂໍ້ມູນຄວາມຄືບໜ້າ')}</div>`;
+ }catch(e){}
+}
+
+async function openProgressForm(){
+ if(!App.cache.projects || !App.cache.projects.length) App.cache.projects = await api('listProjects',{});
+ modal(`
+  <h3 class="section-title">ບັນທຶກຄວາມຄືບໜ້າ</h3>
+  <div class="form-grid">
+   <div class="full"><label class="label">ໂຄງການ</label><select id="gProject" class="input">${App.cache.projects.map(p => `<option value="${p.projectId}">${esc(p.projectName)}</option>`).join('')}</select></div>
+   <div><label class="label">ວັນທີລາຍງານ</label><input id="gDate" type="date" class="input" value="${todayISO()}"></div>
+   <div><label class="label">ຄວາມຄືບໜ້າ %</label><input id="gPct" type="number" min="0" max="100" class="input" value="0"></div>
+   <div class="full"><label class="label">ລາຍລະອຽດການດຳເນີນງານ</label><textarea id="gDetail" class="input"></textarea></div>
+   <div class="full"><label class="label">ຜົນງານທີ່ເກີດຂຶ້ນ</label><textarea id="gOutput" class="input"></textarea></div>
+   <div><label class="label">ບັນຫາ/ອຸປະສັກ</label><textarea id="gProblem" class="input"></textarea></div>
+   <div><label class="label">ແນວທາງແກ້ໄຂ</label><textarea id="gSolution" class="input"></textarea></div>
+  </div>
+  <div class="actions">
+   <button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button>
+   <button class="btn success" onclick="saveProgressForm()">ບັນທຶກ</button>
+  </div>`);
+}
+
+async function saveProgressForm(){
+ const d = { projectId:val('gProject'), reportDate:val('gDate'), detail:val('gDetail'), output:val('gOutput'), problem:val('gProblem'), solution:val('gSolution'), progressPercent:num(val('gPct')), imageFileIds:'', attachmentFileIds:'' };
+ try{ await api('saveProgress', d); closeModal(); toast('ບັນທຶກຄວາມຄືບໜ້າແລ້ວ'); renderProgress(); }catch(e){}
+}
+async function deleteProgressAction(id){ if(!confirm('ລຶບລາຍການຄວາມຄືບໜ້ານີ້ຫຼືບໍ່?')) return; try{ await api('deleteProgress', id); toast('ລຶບແລ້ວ'); renderProgress(); }catch(e){} }
+
+// ---------------- REPORTS ----------------
+async function renderReports(){
+ document.getElementById('content').innerHTML = moduleShell('ລາຍງານຜົນໂຄງການ','ຈັດທຳລາຍງານຜົນຢ່າງເປັນທາງການ ພຣີວິວ / ພິມ / ບັນທຶກ PDF','', 'reportBody');
+ try{
+  const ps = await api('listProjects',{});
+  App.cache.projects = ps;
+  document.getElementById('reportBody').innerHTML = `<div class="grid three">${ps.map(p => `<div class="card"><div class="muted">${esc(p.projectCode)}</div><h3 class="section-title">${esc(p.projectName)}</h3><p>${statusBadge(p.status)} &nbsp; ຄວາມຄືບໜ້າ <b>${num(p.progressPercent)}%</b></p><button class="btn primary sm" onclick="editReport('${p.projectId}')">📝 ຈັດທຳລາຍງານ</button> <button class="btn secondary sm" onclick="previewReport('${p.projectId}')">👁 ພຣີວິວ</button></div>`).join('') || empty('ບໍ່ມີໂຄງການ')}</div>`;
+ }catch(e){}
+}
+
+async function editReport(pid){
+ try{
+  const d = await api('getReport', pid);
+  const r = d.report || {};
+  modal(`
+   <h3 class="section-title">ລາຍງານຜົນ — ${esc(d.project.projectName)}</h3>
+   <div class="form-grid">
+    <div class="full"><label class="label">ຜົນການດຳເນີນງານ</label><textarea id="rResult" class="input">${esc(r.resultSummary||'')}</textarea></div>
+    <div class="full"><label class="label">ຜົນຕາມຕົວຊີ້ວັດ</label><textarea id="rIndicator" class="input">${esc(r.indicatorResult||'')}</textarea></div>
+    <div><label class="label">ບັນຫາ/ອຸປະສັກ</label><textarea id="rProblem" class="input">${esc(r.problem||'')}</textarea></div>
+    <div><label class="label">ຂໍ້ສະເໜີແນະ</label><textarea id="rSuggest" class="input">${esc(r.suggestion||'')}</textarea></div>
+   </div>
+   <div class="actions">
+    <button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button>
+    <button class="btn success" onclick="saveReportForm('${pid}')">ບັນທຶກ</button>
+   </div>`);
+ }catch(e){}
+}
+
+async function saveReportForm(pid){
+ try{ await api('saveReport',{projectId:pid, resultSummary:val('rResult'), indicatorResult:val('rIndicator'), problem:val('rProblem'), suggestion:val('rSuggest'), activityImages:'', attachments:''}); closeModal(); toast('ບັນທຶກລາຍງານແລ້ວ'); }catch(e){}
+}
+
+async function previewReport(pid){
+ try{
+  const d = await api('getReport', pid);
+  const p = d.project; const r = d.report || {}; const b = d.budget;
+  modal(`
+   <div class="report-print">
+    <div style="text-align:center"><h2 style="font-family:'Noto Sans Lao';margin-bottom:4px">ລາຍງານຜົນການດຳເນີນງານໂຄງການ</h2><h3>${esc(p.projectName)}</h3><div>${esc(App.settings.schoolName||'')}</div></div><hr>
+    <p><b>ລະຫັດໂຄງການ:</b> ${esc(p.projectCode)}</p>
+    <p><b>ພະແນກ:</b> ${esc(p.departmentName||'')}</p>
+    <p><b>ຜູ້ຮັບຜິດຊອບ:</b> ${esc(p.ownerName||'')}</p>
+    <p><b>ຈຸດປະສົງ:</b><br>${nl(p.objectives||'-')}</p>
+    <p><b>ເປົ້າໝາຍ:</b><br>${nl((p.quantitativeTarget||'')+'\\n'+(p.qualitativeTarget||''))}</p>
+    <p><b>ໄລຍະເວລາ:</b> ${esc(p.startDate||'-')} ເຖິງ ${esc(p.endDate||'-')}</p>
+    <p><b>ງົບປະມານທີ່ໄດ້ຮັບ:</b> ${money(b.budget)} &nbsp; <b>ໃຊ້ຈິງ:</b> ${money(b.spent)}</p>
+    <p><b>ຜົນການດຳເນີນງານ:</b><br>${nl(r.resultSummary||'ຍັງບໍ່ໄດ້ບັນທຶກ')}</p>
+    <p><b>ຜົນຕາມຕົວຊີ້ວັດ:</b><br>${nl(r.indicatorResult||'-')}</p>
+    <p><b>ບັນຫາ/ອຸປະສັກ:</b><br>${nl(r.problem||'-')}</p>
+    <p><b>ຂໍ້ສະເໜີແນະ:</b><br>${nl(r.suggestion||'-')}</p>
+    <div class="actions no-print">
+     <button class="btn secondary" onclick="closeModal()">ປິດ</button>
+     <button class="btn primary" onclick="window.print()">🖨️ ພິມ / ບັນທຶກ PDF</button>
+    </div>
+   </div>`);
+ }catch(e){}
+}
+
+// ---------------- FILES ----------------
+async function renderFiles(){
+ document.getElementById('content').innerHTML = moduleShell('ເອກະສານໂຄງການ','ອັບໂຫຼດ ເປີດ ດາວໂຫຼດ ແລະ ລຶບໄຟລ໌ໃນໂຄງສ້າງ ພະແນກ > ປີງົບປະມານ > ໂຄງການ','<button class="btn primary" onclick="openUploadForm()">⬆️ ອັບໂຫຼດໄຟລ໌</button>','fileBody');
+ try{
+  App.cache.projects = await api('listProjects',{});
+  const all = await api('listFiles','');
+  document.getElementById('fileBody').innerHTML = fileTable(all);
+ }catch(e){}
+}
+
+function fileTable(rows){
+ if(!rows.length) return empty('ຍັງບໍ່ມີໄຟລ໌');
+ return `<div class="table-wrap"><table class="table"><thead><tr><th>ໂຄງການ</th><th>ຊື່ໄຟລ໌</th><th>ປະເພດ</th><th>ວັນທີອັບໂຫຼດ</th><th>ຈັດການ</th></tr></thead><tbody>${rows.map(f => `<tr><td>${esc(f.projectName || '')}</td><td><b>${esc(f.fileName)}</b><div class="muted">${esc(f.folderPath || '')}</div></td><td>${esc(f.mimeType||'')}</td><td>${esc(f.uploadedAt || '')}</td><td>${f.driveUrl&&f.driveUrl!=='#' ? `<a class="btn primary sm" href="${attr(f.driveUrl)}" target="_blank">ເປີດ</a>` : `<button class="btn secondary sm" onclick="toast('ບໍ່ມີໄຟລ໌ຈິງ')">ເປີດ</button>`} <button class="btn danger sm" onclick="deleteFileAction('${f.fileId}')">ລຶບ</button></td></tr>`).join('')}</tbody></table></div>`;
+}
+
+async function openUploadForm(){
+ if(!App.cache.projects || !App.cache.projects.length) App.cache.projects = await api('listProjects',{});
+ modal(`
+  <h3 class="section-title">ອັບໂຫຼດເອກະສານ</h3>
+  <div class="form-grid">
+   <div class="full"><label class="label">ໂຄງການ</label><select id="upProject" class="input">${App.cache.projects.map(p => `<option value="${p.projectId}">${esc(p.projectName)}</option>`).join('')}</select></div>
+   <div class="full"><label class="label">ໄຟລ໌</label><input id="upFile" type="file" class="input"></div>
+  </div>
+  <div class="actions">
+   <button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button>
+   <button class="btn success" onclick="uploadFileAction()">ອັບໂຫຼດ</button>
+  </div>`);
+}
+
+async function uploadFileAction(){
+ const input = document.getElementById('upFile'); const file = input.files[0];
+ if(!file) return toast('ກະລຸນາເລືອກໄຟລ໌','error');
+ const data = await readFileBase64(file);
+ try{ await api('uploadProjectFile',{projectId:val('upProject'), activityId:'', fileName:file.name, mimeType:file.type||'application/octet-stream', base64:data}); closeModal(); toast('ອັບໂຫຼດໄຟລ໌ແລ້ວ'); renderFiles(); }catch(e){}
+}
+async function deleteFileAction(id){ if(!confirm('ລຶບໄຟລ໌ນີ້ຫຼືບໍ່?')) return; try{ await api('deleteProjectFile', id); toast('ລຶບໄຟລ໌ແລ້ວ'); renderFiles(); }catch(e){} }
+
+function readFileBase64(file){
+ return new Promise((resolve,reject)=>{
+  const r = new FileReader();
+  r.onload = () => resolve(String(r.result).split(',')[1]);
+  r.onerror = reject;
+  r.readAsDataURL(file);
+ });
+}
+
+// ---------------- USERS ----------------
+async function renderUsers(){
+ if(App.user && App.user.role !== 'admin') return go('dashboard');
+ document.getElementById('content').innerHTML = moduleShell('ຜູ້ໃຊ້ງານ','ເພີ່ມ ແກ້ໄຂ ປິດໃຊ້ງານ ແລະ ຣີເຊັດລະຫັດຜ່ານ','<button class="btn primary" onclick="openUserForm()">➕ ເພີ່ມຜູ້ໃຊ້ງານ</button>','userBody');
+ try{
+  const rows = await api('listUsers');
+  App.cache.users = rows;
+  document.getElementById('userBody').innerHTML = userTable(rows);
+ }catch(e){}
+}
+
+function userTable(rows){
+ if(!rows.length) return empty('ຍັງບໍ່ມີຜູ້ໃຊ້ງານ');
+ return `<div class="table-wrap"><table class="table"><thead><tr><th>Username</th><th>ຊື່-ນາມສະກຸນ</th><th>ຕຳແໜ່ງ</th><th>ພະແນກ</th><th>Role</th><th>ສະຖານະ</th><th>ຈັດການ</th></tr></thead><tbody>${rows.map(u => `<tr><td>${esc(u.username)}</td><td><b>${esc(u.fullName)}</b></td><td>${esc(u.position || '')}</td><td>${esc(u.departmentName||'')}</td><td>${roleLabel(u.role)}</td><td>${statusBadge(u.status)}</td><td><button class="btn warn sm" onclick='openUserForm(${JSON.stringify(u).replace(/'/g,"&#39;")})'>ແກ້ໄຂ</button> <button class="btn secondary sm" onclick="resetPasswordAction('${u.userId}')">ຣີເຊັດ</button></td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function openUserForm(u={}){
+ modal(`
+  <h3 class="section-title">${u.userId?'ແກ້ໄຂ':'ເພີ່ມ'}ຜູ້ໃຊ້ງານ</h3>
+  <div class="form-grid">
+   <div><label class="label">ຊື່ຜູ້ໃຊ້ (Username) *</label><input id="uName" class="input" value="${attr(u.username||'')}"></div>
+   <div><label class="label">ລະຫັດຜ່ານ ${u.userId?'(ປະຫວ່າງ = ບໍ່ປ່ຽນ)':'*'}</label><input id="uPass" type="password" class="input"></div>
+   <div class="full"><label class="label">ຊື່-ນາມສະກຸນ *</label><input id="uFull" class="input" value="${attr(u.fullName||'')}"></div>
+   <div><label class="label">ຕຳແໜ່ງ</label><input id="uPos" class="input" value="${attr(u.position||'')}"></div>
+   <div><label class="label">ພະແນກ</label><select id="uDept" class="input"><option value="">ບໍ່ລະບຸ</option>${App.departments.map(d => `<option value="${d.departmentId}" ${d.departmentId===u.departmentId?'selected':''}>${esc(d.name)}</option>`).join('')}</select></div>
+   <div><label class="label">Role</label><select id="uRole" class="input">${['teacher','head','admin'].map(x => `<option value="${x}" ${x===u.role?'selected':''}>${roleLabel(x)}</option>`).join('')}</select></div>
+   <div><label class="label">ສະຖານະ</label><select id="uStatus" class="input"><option ${u.status==='ນຳໃຊ້ງານ'?'selected':''}>ນຳໃຊ້ງານ</option><option ${u.status==='ປິດນຳໃຊ້ງານ'?'selected':''}>ປິດນຳໃຊ້ງານ</option></select></div>
+  </div>
+  <div class="actions">
+   <button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button>
+   <button class="btn success" onclick="saveUserForm('${u.userId||''}')">ບັນທຶກ</button>
+  </div>`);
+}
+
+async function saveUserForm(id){
+ const d = { userId:id||'', username:val('uName'), password:val('uPass'), fullName:val('uFull'), position:val('uPos'), departmentId:val('uDept'), role:val('uRole'), status:val('uStatus') };
+ try{ await api('saveUser', d); closeModal(); toast('ບັນທຶກຜູ້ໃຊ້ງານແລ້ວ'); renderUsers(); }catch(e){}
+}
+
+async function resetPasswordAction(id){
+ const p = prompt('ປ້ອນລະຫັດຜ່ານໃໝ່'); if(!p) return;
+ try{ await api('resetUserPassword', id, p); toast('ຣີເຊັດລະຫັດຜ່ານແລ້ວ'); }catch(e){}
+}
+
+// ---------------- DEPARTMENTS ----------------
+async function renderDepartments(){
+ document.getElementById('content').innerHTML = moduleShell('ພະແນກ/ຝ່າຍ','ຈັດການພະແນກ/ຝ່າຍແບບອອນໄລນ໌','<button class="btn primary" onclick="openDepartmentForm()">➕ ເພີ່ມພະແນກ/ຝ່າຍ</button>','deptBody');
+ try{
+  const rows = await api('listDepartments');
+  App.departments = rows;
+  document.getElementById('deptBody').innerHTML = `<div class="grid two">${rows.map(d => `<div class="card"><h3 class="section-title">${esc(d.name)}</h3><p>${esc(d.description || '')}</p>${statusBadge(d.status)}<div style="margin-top:12px"><button class="btn warn sm" onclick='openDepartmentForm(${JSON.stringify(d).replace(/'/g,"&#39;")})'>ແກ້ໄຂ</button> <button class="btn danger sm" onclick="deleteDepartmentAction('${d.departmentId}')">ລຶບ</button></div></div>`).join('') || empty('ບໍ່ມີພະແນກ/ຝ່າຍ')}</div>`;
+ }catch(e){}
+}
+
+function openDepartmentForm(d={}){
+ modal(`
+  <h3 class="section-title">${d.departmentId?'ແກ້ໄຂ':'ເພີ່ມ'}ພະແນກ/ຝ່າຍ</h3>
+  <label class="label">ຊື່ພະແນກ/ຝ່າຍ *</label><input id="dName" class="input" value="${attr(d.name||'')}">
+  <div style="height:10px"></div>
+  <label class="label">ຄຳອະທິບາຍ</label><textarea id="dDesc" class="input">${esc(d.description||'')}</textarea>
+  <div style="height:10px"></div>
+  <label class="label">ສະຖານະ</label><select id="dStatus" class="input"><option ${d.status==='ນຳໃຊ້ງານ'?'selected':''}>ນຳໃຊ້ງານ</option><option ${d.status==='ປິດນຳໃຊ້ງານ'?'selected':''}>ປິດນຳໃຊ້ງານ</option></select>
+  <div class="actions"><button class="btn secondary" onclick="closeModal()">ຍົກເລີກ</button><button class="btn success" onclick="saveDepartmentForm('${d.departmentId||''}')">ບັນທຶກ</button></div>`);
+}
+
+async function saveDepartmentForm(id){
+ try{ await api('saveDepartment',{departmentId:id||'', name:val('dName'), description:val('dDesc'), status:val('dStatus')}); closeModal(); toast('ບັນທຶກພະແນກແລ້ວ'); renderDepartments(); }catch(e){}
+}
+async function deleteDepartmentAction(id){ if(!confirm('ລຶບພະແນກນີ້ຫຼືບໍ່?')) return; try{ await api('deleteDepartment', id); toast('ລຶບພະແນກແລ້ວ'); renderDepartments(); }catch(e){} }
+
+// ---------------- SETTINGS / BACKUP / LOGS ----------------
+async function renderSettings(){
+ document.getElementById('content').innerHTML = moduleShell('ຕັ້ງຄ່າ','ຊື່ລະບົບ ສະຖານສຶກສາ Logo Banner ຫົວລາຍງານ ແລະ ລະຫັດ Admin','','settingsBody');
+ try{
+  const s = await api('getSettings');
+  document.getElementById('settingsBody').innerHTML = `
+   <div class="form-grid">
+    <div><label class="label">ຊື່ລະບົບ</label><input id="sSystem" class="input" value="${attr(s.systemName||'')}"></div>
+    <div><label class="label">ຊື່ອົງກອນ/ສະຖານສຶກສາ</label><input id="sSchool" class="input" value="${attr(s.schoolName||'')}"></div>
+    <div class="full"><label class="label">ທີ່ຢູ່</label><input id="sAddress" class="input" value="${attr(s.address||'')}"></div>
+    <div><label class="label">ສັງກັດ</label><input id="sAff" class="input" value="${attr(s.affiliation||'')}"></div>
+    <div><label class="label">ຊື່ຜູ້ບໍລິຫານ</label><input id="sDirector" class="input" value="${attr(s.directorName||'')}"></div>
+    <div><label class="label">ປີງົບປະມານເລີ່ມຕົ້ນ</label><input id="sYear" class="input" value="${attr(s.defaultFiscalYear||'')}"></div>
+    <div><label class="label">Logo URL</label><input id="sLogo" class="input" value="${attr(s.logoUrl||'')}"></div>
+    <div><label class="label">Banner URL</label><input id="sBanner" class="input" value="${attr(s.bannerUrl||'')}"></div>
+    <div class="full"><label class="label">Footer (ແຖບລຸ່ມ)</label><input id="sFooter" class="input" value="${attr(s.footerText||'')}"></div>
+    <div class="full"><label class="label">ປ່ຽນລະຫັດຜ່ານ Admin (ປະຫວ່າງ = ບໍ່ປ່ຽນ)</label><input id="sAdminPass" type="password" class="input"></div>
+   </div>
+   <div class="actions"><button class="btn success" onclick="saveSettingsForm()">💾 ບັນທຶກການຕັ້ງຄ່າ</button></div>`;
+ }catch(e){}
+}
+
+async function saveSettingsForm(){
+ const d = { systemName:val('sSystem'), schoolName:val('sSchool'), address:val('sAddress'), affiliation:val('sAff'), directorName:val('sDirector'), defaultFiscalYear:val('sYear'), logoUrl:val('sLogo'), bannerUrl:val('sBanner'), footerText:val('sFooter'), adminPassword:val('sAdminPass') };
+ try{ const s = await api('saveSettings', d); App.settings = s; applyBrand(); toast('ບັນທຶກການຕັ້ງຄ່າແລ້ວ'); }catch(e){}
+}
+
+function renderBackup(){
+ document.getElementById('content').innerHTML = `
+  <div class="page">
+   <div class="page-head"><div><h2>ສຳຮອງຂໍ້ມູນ</h2><p>ສຳຮອງຂໍ້ມູນທຸກ Sheet ເປັນໄຟລ໌ ZIP</p></div></div>
+   <div class="card">
+    <h3 class="section-title">ສຳຮອງຂໍ້ມູນລະບົບ</h3>
+    <p class="muted">ລະບົບຈະສ້າງໄຟລ໌ ZIP ພາຍໃນໂຟນເດີ <b>Backups</b> ໃຕ້ FOLDER_ID ທີ່ກຳນົດໄວ້</p>
+    <button class="btn primary" onclick="backupAction()">💾 ສ້າງໄຟລ໌ສຳຮອງຕອນນີ້</button>
+    <div id="backupResult" style="margin-top:15px"></div>
+   </div>
+  </div>`;
+}
+
+async function backupAction(){
+ try{
+  const d = await api('createBackup');
+  document.getElementById('backupResult').innerHTML = `<div class="mode-box"><b>${esc(d.name||'Backup')}</b><br>${d.url&&d.url!=='#'?`<a href="${attr(d.url)}" target="_blank">ເປີດໄຟລ໌ສຳຮອງ</a>`:'ບໍ່ມີໄຟລ໌ຈິງ'}</div>`;
+  toast('ສ້າງໄຟລ໌ສຳຮອງແລ້ວ');
+ }catch(e){}
+}
+
+async function renderLogs(){
+ document.getElementById('content').innerHTML = moduleShell('ປະຫວັດການນຳໃຊ້','ບັນທຶກການເຂົ້າສູ່ລະບົບ ການແກ້ໄຂ ອັບໂຫຼດ ແລະ ລາຍການສຳຄັນຕ່າງໆ','','logBody');
+ try{
+  const rows = await api('listLogs', 300);
+  document.getElementById('logBody').innerHTML = `<div class="table-wrap"><table class="table"><thead><tr><th>ວັນເວລາ</th><th>ຜູ້ໃຊ້</th><th>ການກະທຳ</th><th>ລາຍລະອຽດ</th><th>Record ID</th></tr></thead><tbody>${rows.map(l => `<tr><td>${esc(l.timestamp)}</td><td>${esc(l.username)}</td><td>${esc(l.action)}</td><td>${esc(l.detail)}</td><td>${esc(l.recordId)}</td></tr>`).join('')}</tbody></table></div>`;
+ }catch(e){}
+}
+
+// ---------------- COMMON UI ----------------
+function moduleShell(title,sub,action,bodyId){ return `<div class="page"><div class="page-head"><div><h2>${title}</h2><p>${sub}</p></div>${action||''}</div><div class="card" id="${bodyId}"><div class="skeleton"></div></div></div>`; }
+function statusBadge(s){
+ let c = ['ສຳເລັດ','ອະນຸມັດ','ນຳໃຊ້ງານ'].indexOf(s)>=0 ? 'b-green' : ['ຫຼ້າຊ້າ','ປິດນຳໃຊ້ງານ','ຍົກເລີກ'].indexOf(s)>=0 ? 'b-pink' : ['ກຳລັງດຳເນີນງານ','ລໍຖ້າກວດສອບ'].indexOf(s)>=0 ? 'b-orange' : 'b-blue';
+ return `<span class="badge ${c}">${esc(s||'-')}</span>`;
+}
+function skeletonPage(){ document.getElementById('content').innerHTML = `<div class="grid summary"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>`; }
+function modal(html){ document.getElementById('modalRoot').innerHTML = `<div class="modal-back" onclick="if(event.target===this)closeModal()"><div class="modal">${html}</div></div>`; }
+function closeModal(){ document.getElementById('modalRoot').innerHTML = ''; }
+function toast(msg,type){
+ type = type || 'success';
+ const t = document.createElement('div');
+ t.className = 'toast';
+ t.style.borderLeftColor = type==='error' ? '#e64a6b' : type==='warning' ? '#ff9d28' : '#26B96E';
+ t.textContent = msg;
+ document.getElementById('toastRoot').appendChild(t);
+ setTimeout(function(){ if(t.parentNode) t.parentNode.removeChild(t); }, 2800);
+}
+function showLoading(on){ document.getElementById('loadingRoot').innerHTML = on ? '<div class="loading"><div class="spinner"></div></div>' : ''; }
+function empty(t){ return `<div class="empty">${esc(t)}</div>`; }
+function setText(id,t){ const el = document.getElementById(id); if(el) el.textContent = t; }
+function money(v){ return Number(v||0).toLocaleString('lo-LA',{maximumFractionDigits:2}) + ' ກີບ'; }
+function formatNumber(v){ return Number(v||0).toLocaleString('lo-LA'); }
+function num(v){ const n = Number(v); return isFinite(n) ? n : 0; }
+function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+function esc(s){
+ return String(s || '').replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m] });
+}
+function attr(s){ return esc(s); }
+function nl(s){ return esc(s).replace(/\n/g, '<br>'); }
+function todayISO(){
+ const d = new Date(), off = d.getTimezoneOffset();
+ return new Date(d.getTime() - off*60000).toISOString().slice(0,10);
+}
+function dateForInput(s){
+ s = String(s||'');
+ return /^\\d{4}-\\d{2}-\\d{2}$/.test(s) ? s : '';
+}
+</script>
+</body>
+</html>
