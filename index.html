@@ -90,6 +90,16 @@ function saveApiConfig() {
   closeModal();
 }
 
+// Auto-detect from Vercel Environment Variable (/api/config)
+(function checkVercelEnv(){
+  fetch('/api/config')
+    .then(r => r.json())
+    .then(d => {
+      if (d && d.apiUrl) window.DEFAULT_GAS_API_URL = d.apiUrl;
+    })
+    .catch(function(){});
+})();
+
 async function callBackend(action, ...args) {
   // 1. ຖ້າເປີດໃນ Google Apps Script Web App ໂດຍກົງ
   if (typeof google !== 'undefined' && google.script && google.script.run) {
@@ -106,7 +116,17 @@ async function callBackend(action, ...args) {
   }
 
   // 2. ຖ້າເປີດໃນ Vercel / Localhost -> ເອີ້ນຜ່ານ HTTP POST Fetch
-  const apiUrl = getGasApiUrl();
+  let apiUrl = getGasApiUrl();
+  if (!apiUrl) {
+    try {
+      const envRes = await fetch('/api/config').then(r => r.json());
+      if (envRes && envRes.apiUrl) {
+        window.DEFAULT_GAS_API_URL = envRes.apiUrl;
+        apiUrl = envRes.apiUrl;
+      }
+    } catch(ignore) {}
+  }
+
   if (!apiUrl) {
     openApiConfigModal();
     throw new Error('ກະລຸນາກຳນົດ Web App URL ຂອງ Google Apps Script ກ່ອນ (ຄລິກປຸ່ມ ⚙️)');
